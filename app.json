@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "EMS-App",
+    "slug": "EMS-App",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "safeAreaInsets": {
+        "bottom": 0
+      },
+      "bundleIdentifier": "com.yourcompany.emsapp",
+      "buildNumber": "1.0.0",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "This app needs access to location to report accidents accurately.",
+        "NSLocationAlwaysUsageDescription": "This app needs access to location to report accidents accurately.",
+        "NSCameraUsageDescription": "This app needs access to the camera to take photos of accidents.",
+        "NSPhotoLibraryUsageDescription": "This app needs access to photos to upload accident images."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.yourcompany.emsapp",
+      "versionCode": 1,
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "CAMERA",
+        "AUDIO_RECORDING",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow EMS-App to use your location to report accidents accurately."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow EMS-App to access your photos to upload accident images."
+        }
+      ],
+      "expo-asset"
+    ]
+  }
+}
